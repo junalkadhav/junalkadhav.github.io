@@ -1,2 +1,2 @@
 # junalkadhav.github.io
-just started webdesigning (basic html only XD)
+nothing here ;_;
