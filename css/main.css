@@ -21,7 +21,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+	vertical-align: middle;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -47,7 +47,9 @@ table {
 	border-spacing: 0;
 }
 
-
+html{
+	scroll-behavior:smooth;
+}
 
 
 
@@ -122,7 +124,7 @@ h4{
 
 .name {
 	float: left;
-    border-top: 4px solid #648880;
+    border-top: 12px solid #648880;
 	padding: 40px 0 22px 0;
 	float: left;
 	font-size: 48px;
@@ -144,6 +146,7 @@ footer{
 }
 .small {
   float: left;
+  font-weight:400;
 }
 /*
   ========================================
@@ -181,7 +184,7 @@ h2 {
 h3 {
   font-size: 21px;
 }
-span{
+.hey{
 	font-style:italic;
 	font-size:22px;
 	font-family:Times Roman;
@@ -276,7 +279,7 @@ a{
     opacity:0.5;
 	box-shadow: 4px 4px 3px 0px #000000;
 }
-.social li{
+/* .social li{
 	display:inline-block;
 	width:33.33%;
 	text-align:center;
@@ -285,10 +288,21 @@ a{
 .social ul{
 	margin:0 auto;
 	list-style:disc;
+} */
+/* .social{ */
+	/* font-size:140%; */
+/* } */
+.socialhalf{
+	display:inline-block;
+	width:50%;
+	font-size:120%;
 }
-#contact {
-	text-align: center;
-} 
+
+.socialhalf li{
+	margin:2%;
+	padding:2%;
+}
+
 .skill>ul{
 	list-style:inside;
 }
@@ -301,7 +315,6 @@ a{
 .skill li:hover{
 	transform: scale(1.1,1.1);
 	box-shadow: 4px 4px 3px 0px #000000;
-	text-shadow: 4px 4px 3px 0px #000000;
 }
 .skill li{
 	border-bottom: 1px solid black;
@@ -326,27 +339,67 @@ b, strong {
 	display:inline-block;
 	margin:2.5%;
 }
-details > *:not(summary){
+/* details > *:not(summary){
   margin-left: 2em;
-}
+} */
 .rowf {
 	border-top:3px solid black;
 }
 .social{
 	margin:10% auto;
 }
-details > summary{
+.details summary{
 	  box-shadow: 4px 4px 3px 0px #000000;
+	  background-color:rgba(255,255,255,0.5);
 	  border:1px solid black;
 	  cursor: pointer;
+	  padding:2%;
+	  transition:0.2s;
 }
 
-details{
+.details{
 	padding:1.2%;
 }
-details>p{
-	margin-top:1%;
+.details p{
+	background-color:rgba(255,255,255,0.5);
+	margin:1%;
 	border:1px solid black;
 	padding:1% 3%;
 	box-shadow: 4px 4px 3px 0px #000000;
+}
+*:focus {
+    outline: 0 !important;
+}
+a:link {
+  color: black;
+  background-color: transparent;
+}
+
+a:visited {
+  color: black;
+  background-color: transparent;
+}
+
+a:hover {
+  color: white;
+  background-color: transparent;
+}
+
+a:active {
+  color: purple;
+  background-color: transparent;
+}
+.details a:link,.details a:visited{
+	color:purple;
+}
+details[open] summary ~ * {
+  animation: sweep .2s ease-in-out;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; margin-top: -10px}
+  100%  {opacity: 1; margin-top: 0px}
+}
+.details summary:hover{
+	transform: scale(1.1);
 }
