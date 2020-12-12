@@ -1,1 +1,1 @@
-UNDER MAINTAINCE COME BACK LATER ;_;
+This Website is not responsive yet(Still working on it)
