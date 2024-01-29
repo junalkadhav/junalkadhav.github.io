@@ -44,7 +44,7 @@
 					<br>
 					<strong>Age:</strong>
 					<br>
-					22
+						<span id="age"></span>
 					<br>
 					<strong>Location:</strong>
 					<br>
@@ -194,5 +194,10 @@
 		<small><p style="text-align:center; font-style:italic;">Any suggestions? feel free to connect.</p></small>
 	</footer>
 	</div>
+	<script>
+        	const date = new Date();
+        	const age = date.getMonth() > 2 ? date.getFullYear() - 1999 : date.getFullYear() - 2000;
+        	document.getElementById("age").textContent = age;
+    	</script>
 </body>
 </html>
